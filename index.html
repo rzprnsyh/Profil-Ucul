@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda Imut</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateLogin() {
+            // Username dan password yang benar
+            const correctUsername = "admin";
+            const correctPassword = "admin";
+
+            // Ambil nilai input username dan password
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Cek apakah username dan password cocok
+            if (username === correctUsername && password === correctPassword) {
+                alert("Login Berhasil! Selamat datang di dunia seru ini! 🎉");
+                // Setelah alert ditutup, langsung arahkan ke halaman profil
+                window.location.href = "profil.html";
+                return false; // Mencegah form submit default
+            } else {
+                alert("Username atau Kata Sandi Salah. Silakan coba lagi! ❌");
+                return false; // Login gagal
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="header.jpg" alt="Gambar Imut">
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link" data-target="hero"><i class="fas fa-home"></i>🏠 Beranda</a>
+        <a href="profil.html" class="nav-link" id="profilLink"><i class="fas fa-info-circle"></i>👤 Profil</a>
+        <a href="kontak.html" class="nav-link" id="kontakLink"><i class="fas fa-envelope"></i>📞 Kontak</a>
+    </nav>
+
+    <div class="container">
+        <!-- Bagian kiri: Ucapan Selamat Datang -->
+        <div class="welcome-section">
+            <h2>🎉 Heyy! Selamat datang di welcome! </h2>
+            <p>✨ Senang banget kamu mampir ke sini! 😄 Yuk, jelajahi halaman ini,
+                 temukan hal-hal seru, dan jangan lupa untuk login biar bisa menikmati semua fiturnya! Kalau ada apa-apa,
+                  langsung aja cek bagian kontak, ya! 😉</p>
+        </div>
+
+        <!-- Bagian kanan: Form Login -->
+        <div class="login-section">
+            <h2>🔑 Login</h2>
+            <form onsubmit="return validateLogin()">
+                <input type="text" id="username" name="username" placeholder="👤 Nama Pengguna" required><br>
+                <input type="password" id="password" name="password" placeholder="🔒 Kata Sandi" required><br>
+                <button type="submit">✨ Masuk ✨</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Kunjungi kami di <a href="https://www.instagram.com/rzprnsyh.ptri?igsh=cGQzZHNram81OW4z" target="_blank">📸 Instagram</a>!</p>
+        <div class="footer-bottom">
+            <P>&copy; Reza Apriansyah Putri</P>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Kontak</title>
+    <link rel="stylesheet" href="kontak.css">
+</head>
+<body>
+
+    <header>
+        <img src="header.jpg" alt="Gambar Imut">
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link" data-target="hero"><i class="fas fa-home"></i>🏠 Beranda</a>
+            <a href="profil.html" class="nav-link" id="profilLink"><i class="fas fa-info-circle"></i>👤 Profil</a>
+            <a href="kontak.html" class="nav-link" id="kontakLink"><i class="fas fa-envelope"></i>📞 Kontak</a>
+        
+    </nav>
+
+    <div class="container kontak-container">
+        <!-- Kolom Kiri: Informasi Kontak -->
+        <div class="kontak-info">
+            <h2>📞 Informasi Kontak</h2>
+            <p><strong>Email:</strong> aapriansyahputri@gmail.com</p>
+            <p><strong>Telepon:</strong> +62 858-2475-4547</p>
+            <p><strong>Instagram:</strong> @rzprnsyh.ptri</p>
+            <p><strong>Alamat:</strong> Btn. Hartaco Indah</p>
+        </div>
+
+        <!-- Kolom Kanan: Tombol Log Out -->
+        <div class="logout-section">
+            <h2>🔒 Keluar</h2>
+            <p>Klik dibawah untuk keluar:</p>
+            <button onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Kunjungi kami di <a href="https://www.instagram.com/rzprnsyh.ptri?igsh=cGQzZHNram81OW4z" target="_blank">📸 Instagram</a>!</p>
+        <div class="footer-bottom">
+            <p>&copy; Reza Apriansyah Putri</p>
+        </div>
+    </footer>
+
+    <script>
+        function logout() {
+            alert("Anda telah keluar!");
+            window.location.href = "index.html"; // Ganti dengan halaman login Anda
+        }
+    </script>
+
+</body>
+</html>

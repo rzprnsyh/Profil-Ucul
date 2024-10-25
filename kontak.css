@@ -1,0 +1,121 @@
+/* Mengatur body untuk memenuhi layar */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f9f5f1;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Menyusun body agar tinggi 100% dari viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mengatur agar header tetap di atas dan responsif */
+header {
+    text-align: center;
+    background-color: #fcd6f5;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengatur gambar pada header agar lebih kecil */
+header img {
+    width: 200%; /* Agar gambar responsif */
+    max-width: 1200px; /* Ukuran maksimum gambar */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio */
+}
+
+/* Navigasi berada di tengah */
+nav {
+    background-color: #ff80ab;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffc1e3;
+}
+
+/* Menyusun container agar memenuhi sisa layar */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 1; /* Membuat container memenuhi layar secara vertikal */
+    align-items: flex-start; /* Memastikan elemen terletak di atas */
+}
+
+/* Mengatur bagian informasi kontak */
+.kontak-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffaade92;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.kontak-info h2 {
+    color: #ff4081;
+    font-size: 1.5em;
+}
+
+.kontak-info p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Mengatur logout section agar berada di kanan */
+.logout-section {
+    display: flex; /* Menggunakan flexbox untuk layout */
+    flex-direction: column; /* Mengatur teks dalam kolom */
+    align-items: flex-end; /* Menempatkan elemen di kanan */
+    padding: 20px; /* Padding untuk ruang */
+    background-color: #d592c798; /* Warna latar belakang */
+    border-radius: 10px; /* Sudut yang membulat */
+}
+
+/* Mengatur tombol log out */
+.logout-section button {
+    padding: 10px 15px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.logout-section button:hover {
+    background-color: #ff1f5b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fcd6f5;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+}
+
+/* Responsive: Atur layout jadi kolom saat layar lebih kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Mengubah layout jadi kolom */
+        align-items: center; /* Menempatkan elemen di tengah */
+    }
+
+    .kontak-info {
+        margin-right: 0;
+        margin-bottom: 20px; /* Jarak antar elemen */
+    }
+}
